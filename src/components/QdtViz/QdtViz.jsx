@@ -62,12 +62,6 @@ const QdtViz = ({
       { !error && qViz
         && (
           <>
-            <div
-              ref={node}
-              style={{
-                width, height, minWidth, minHeight,
-              }}
-            />
             {exportData && (
             <div style={btnStyle}>
               <QdtButton type="exportData" qViz={qViz} title={exportDataTitle} options={exportDataOptions} />
@@ -84,6 +78,12 @@ const QdtViz = ({
               <QdtButton type="exportPdf" qViz={qViz} title={exportPdfTitle} options={exportPdfOptions} />
             </div>
           )}
+          <div
+              ref={node}
+              style={{
+                width, height, minWidth, minHeight,
+              }}
+            />
           </>
         )}
     </>
